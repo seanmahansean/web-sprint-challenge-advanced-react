@@ -18,9 +18,11 @@ export default class PlantList extends Component {
     axios
       .get('http://localhost:3333/plants')
       .then(res => {
+        //This gets all the plants from the api to the other modules
         this.setState({plants: res.data})
       })
       .catch((err) => {
+        //This alerts you that something went wrong on a page level
         console.log("error", err)
       });
   }
